@@ -22,9 +22,9 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: frontent
+        working-directory: frontend
     steps:
       - uses: actions/checkout@v4
       - run: npm install
       - name: Run functional tests
-        run: npm test
+        run: npm test -- --coverage --watchAll=false
